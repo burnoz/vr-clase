@@ -6,7 +6,7 @@ public class FireBulletOnActivate : MonoBehaviour
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20;
-
+    public SFXManager sFXManager;
     void Start()
     {
         UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
@@ -17,6 +17,8 @@ public class FireBulletOnActivate : MonoBehaviour
 
     public void FireBullet(ActivateEventArgs arg)
     {
+        sFXManager.PlayBeamSound();
+
         GameObject spawnedBullet = Instantiate(bullet);
 
         spawnedBullet.transform.position = spawnPoint.position;

@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "vr-clase.sln"
+    "dotnet.defaultSolution": "VR_BrunoLucia.sln"
 }
